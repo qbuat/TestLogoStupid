@@ -24,9 +24,10 @@ if __name__ == '__main__':
     h1.GetYaxis().SetTitle('Number of events')
     h1.Draw()
 
-    canv.SaveAs('lame_plot.png')
     if args.autograph:
         from img import awesome_plot
         awesome_plot(canv)
         canv.SaveAs('awesome_plot.png')
+    else:
+        canv.SaveAs('lame_plot.png')
         
